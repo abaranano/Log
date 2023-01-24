@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class Menu {
     private static Scanner teclado = new Scanner(System.in);
     
+    /*
+     * @author Ander_BaraÃ±ano
+     * @param ret ret:array
+     */
     public int[] pedirNumeros(){
         int[] ret = new int[2];
         System.out.print ("Operando 1: ");
@@ -12,6 +16,9 @@ public class Menu {
         return ret;
     }
     
+    /*
+     * @param ret ret:variable del menu                                 
+     */
     public String menuOpciones() {
         String ret = "";
         do {
@@ -24,11 +31,14 @@ public class Menu {
                 return ret;
     }
     
+    /*
+     * @param ret ret:es un booleano para determinar si salir del bucle o no
+     */
     public boolean repetir(){
         boolean ret = false;
         String respuesta;
         do {
-            System.out.print ("¿Desea continuar trabajando con la calculadora? [s / n]");
+            System.out.print ("ï¿½Desea continuar trabajando con la calculadora? [s / n]");
             respuesta = teclado.next();
         } while (!((respuesta.equalsIgnoreCase("s")) || (respuesta.equalsIgnoreCase("n"))
                     ));
